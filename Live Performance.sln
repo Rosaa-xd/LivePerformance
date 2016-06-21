@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Live Performance", "Live Performance\Live Performance.csproj", "{A6D16043-7CEC-4CE0-93E5-8A1F68E607B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Live Performance Test", "Live Performance Test\Live Performance Test.csproj", "{9FB6614E-8CA9-4FE3-BA62-8692D9E23DC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6D16043-7CEC-4CE0-93E5-8A1F68E607B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D16043-7CEC-4CE0-93E5-8A1F68E607B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D16043-7CEC-4CE0-93E5-8A1F68E607B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6D16043-7CEC-4CE0-93E5-8A1F68E607B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FB6614E-8CA9-4FE3-BA62-8692D9E23DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FB6614E-8CA9-4FE3-BA62-8692D9E23DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FB6614E-8CA9-4FE3-BA62-8692D9E23DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FB6614E-8CA9-4FE3-BA62-8692D9E23DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
