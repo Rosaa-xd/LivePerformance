@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Live_Performance
+namespace Live_Performance.Forms
 {
-    public partial class Form1 : Form
+    public partial class HuurcontractForm : Form
     {
-        public Form1()
+        public HuurcontractForm()
         {
             InitializeComponent();
         }
