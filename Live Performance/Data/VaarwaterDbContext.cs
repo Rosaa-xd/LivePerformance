@@ -53,7 +53,27 @@ namespace Live_Performance.Data
                 }
             }
             return vaarwateren;
-        } 
+        }
+
+        public static Vaarwater Save(Vaarwater v)
+        {
+            using (OracleCommand command = new OracleCommand())
+            {
+                command.CommandType = CommandType.StoredProcedure;
+                command.CommandText = "GETIDVAARWATER";
+
+                command.BindByName = true;
+                command.Parameters.Add("naam", v.Naam);
+                command.Parameters.Add("prijs_id", v.Prijs.Id);
+                command.Parameters.Add("vaarwater_id", OracleDbType.Int32, ParameterDirection.ReturnValue);
+
+                command.Connection = CreateConnection();
+                command.ExecuteNonQuery();
+
+                v.Id = Convert.ToInt32(command.Parameters["VAARWATER_ID"].Value.ToString());
+            }
+            return v;
+        }
 
         private static Vaarwater GetVaarwaterFromDataRecord(IDataRecord record)
         {

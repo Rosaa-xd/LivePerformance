@@ -50,6 +50,42 @@ namespace Live_Performance.Models
             VaarwaterDbContext.GetAll();
         }
 
+        public static Vaarwater VaarwaterBudget(double budget, List<Boot> boten, List<Artikel> artikelen, List<Vaarwater> vaarwateren)
+        {
+            int aantal;
+            //auto generated LINQ expression
+            budget = boten.Aggregate(budget, (current, b) => current - b.Prijs.Waarde);
+            budget = artikelen.Aggregate(budget, (current, a) => current - a.Prijs.Waarde);
+            budget = vaarwateren.Aggregate(budget, (current, v) => current - v.Prijs.Waarde);
+
+            if (budget >= 6)
+            {
+                budget = budget / 1.50;
+                aantal = (int) budget;
+            }
+            if (budget >= 18)
+            {
+                aantal = 12;
+            }
+            else
+            {
+                aantal = (int) budget;
+            }
+
+            if (aantal == 0)
+            {
+                return null;
+            }
+            //http://stackoverflow.com/questions/11700697/find-in-bindinglistt
+            Vaarwater vaarwater = Vaarwateren.SingleOrDefault(v => v.Aantal == aantal);
+            return vaarwater;
+        }
+
+        public void Save(Vaarwater v)
+        {
+            Vaarwateren.Add(VaarwaterDbContext.Save(v));
+        }
+
         public override string ToString()
         {
             return Naam + " " + Aantal;

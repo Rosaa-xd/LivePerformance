@@ -57,6 +57,31 @@ namespace Live_Performance.Data
             return null;
         }
 
+        public static User LogIn(string naam, string wachtwoord)
+        {
+            string query = "SELECT * " +
+                           "FROM TBL_HUURDER " +
+                           "WHERE NAAM=:naam " +
+                           "AND WACHTWOORD=:wachtwoord";
+
+            using (OracleConnection connection = CreateConnection())
+            using (OracleCommand command = new OracleCommand(query, connection))
+            {
+                command.BindByName = true;
+                command.Parameters.Add(new OracleParameter("naam", naam));
+                command.Parameters.Add(new OracleParameter("wachtwoord", wachtwoord));
+
+                using (OracleDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return GetUserFromDataRecord(reader);
+                    }
+                }
+            }
+            return null;
+        }
+
         private static User GetUserFromDataRecord(IDataRecord record)
         {
             return new User(

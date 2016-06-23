@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160419\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
       <Private>True</Private>
@@ -58,6 +62,12 @@
     <Compile Include="Data\PrijsDbContext.cs" />
     <Compile Include="Data\UserDbContext.cs" />
     <Compile Include="Data\VaarwaterDbContext.cs" />
+    <Compile Include="Forms\AddVaarwaterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddVaarwaterForm.Designer.cs">
+      <DependentUpon>AddVaarwaterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,16 +86,26 @@
     <Compile Include="Forms\HuurcontractForm.Designer.cs">
       <DependentUpon>HuurcontractForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Artikel.cs" />
     <Compile Include="Models\Boot.cs" />
     <Compile Include="Models\Boottype.cs" />
     <Compile Include="Models\HuurContract.cs" />
     <Compile Include="Models\JSonHelperClass.cs" />
+    <Compile Include="Models\MotorbootException.cs" />
     <Compile Include="Models\Prijs.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Vaarwater.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddVaarwaterForm.resx">
+      <DependentUpon>AddVaarwaterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\HuurcontractForm.resx">
       <DependentUpon>HuurcontractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

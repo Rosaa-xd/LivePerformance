@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gb_Boten = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbl_ShowPrijs = new System.Windows.Forms.Label();
             this.lbl_Prijs = new System.Windows.Forms.Label();
             this.btn_DeleteBoot = new System.Windows.Forms.Button();
@@ -60,8 +62,6 @@
             this.btn_AddVW = new System.Windows.Forms.Button();
             this.lb_Vaarwateren = new System.Windows.Forms.ListBox();
             this.btn_Back = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.gb_Boten.SuspendLayout();
             this.gb_Artikelen.SuspendLayout();
             this.gb_Wateren.SuspendLayout();
@@ -91,6 +91,24 @@
             this.gb_Boten.TabIndex = 2;
             this.gb_Boten.TabStop = false;
             this.gb_Boten.Text = "Boten";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(270, 150);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(12, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "x";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(202, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Tankinhoud:";
             // 
             // lbl_ShowPrijs
             // 
@@ -364,6 +382,7 @@
             this.btn_AddVW.TabIndex = 1;
             this.btn_AddVW.Text = "Toevoegen";
             this.btn_AddVW.UseVisualStyleBackColor = true;
+            this.btn_AddVW.Click += new System.EventHandler(this.btn_AddVW_Click);
             // 
             // lb_Vaarwateren
             // 
@@ -381,24 +400,6 @@
             this.btn_Back.TabIndex = 5;
             this.btn_Back.Text = "Terug";
             this.btn_Back.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(202, 150);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Tankinhoud:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(270, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(12, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "x";
             // 
             // AdminForm
             // 

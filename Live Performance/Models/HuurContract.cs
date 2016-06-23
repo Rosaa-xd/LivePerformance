@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Live_Performance.Data;
 
 namespace Live_Performance.Models
@@ -51,6 +53,17 @@ namespace Live_Performance.Models
         public static void LoadAll()
         {
             HuurContractDbContext.GetAll();
+        }
+
+        public void Export(HuurContract hc, string path)
+        {
+            using (StreamWriter writer = new StreamWriter(path))
+            {
+                string json = JSonHelperClass.HuurContractToJson(hc);
+                writer.WriteLine(json);
+                //Making sure it'll write to file
+                writer.Flush();
+            }
         }
 
         public override string ToString()

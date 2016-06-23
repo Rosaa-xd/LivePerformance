@@ -70,6 +70,18 @@ namespace Live_Performance.Models
             return boot.Boottype.Naam;
         }
 
+        public static bool BootTypeAllowed(IEnumerable<Boot> boten)
+        {
+            foreach (var b in boten)
+            {
+                if (b.Aandrijving == "Motorboot")
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public override string ToString()
         {
             return Naam;

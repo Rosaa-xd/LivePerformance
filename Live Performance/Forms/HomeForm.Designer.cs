@@ -246,6 +246,7 @@
             this.btn_Export.TabIndex = 4;
             this.btn_Export.Text = "Export";
             this.btn_Export.UseVisualStyleBackColor = true;
+            this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
             // 
             // btn_GevoelsTemp
             // 
@@ -274,6 +275,7 @@
             this.btn_LogIn.TabIndex = 1;
             this.btn_LogIn.Text = "Log In";
             this.btn_LogIn.UseVisualStyleBackColor = true;
+            this.btn_LogIn.Click += new System.EventHandler(this.btn_LogIn_Click);
             // 
             // lb_Huurcontracten
             // 

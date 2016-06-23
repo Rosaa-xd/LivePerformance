@@ -34,6 +34,17 @@ namespace Live_Performance.Models
             UserDbContext.Save(user);
         }
 
+        public static bool Login(string naam, string wachtwoord)
+        {
+            User user = UserDbContext.LogIn(naam, wachtwoord);
+
+            if (user == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
         public override string ToString()
         {
             return Naam + " " + EmailAdres;

@@ -42,18 +42,43 @@ namespace Live_Performance.Forms
 
         private void btn_AddVaarwater_Click(object sender, EventArgs e)
         {
-            vaarwateren.Add((Vaarwater) cb_Vaarwateren.SelectedItem);
+            if (Boot.BootTypeAllowed(boten))
+            {
+                vaarwateren.Add((Vaarwater)cb_Vaarwateren.SelectedItem);
+            }
+            else
+            {
+                MessageBox.Show("Spierkracht boten zijn hier niet toegestaan!");
+            }
         }
 
         private void btn_CreateHC_Click(object sender, EventArgs e)
         {
-            User user = new User(tb_HuurderNaam.Text, tb_Email.Text, tb_Wachtwoord.Text);
-            user.SaveUser(user);
-            HuurContract hc = new HuurContract(dtp_Startdatum.Value, dtp_Einddatum.Value, boten, artikelen, vaarwateren,
-                user);
-            hc.SaveHuurContract(hc);
-            HuurContract.HuurContracten.Add(hc);
-            Close();
+            Vaarwater vaarwater = Vaarwater.VaarwaterBudget((double)nud_Vaarbudget.Value, boten, artikelen, vaarwateren);
+            if (vaarwater == null)
+            {
+                MessageBox.Show("U kunt geen Friese meren bevaren");
+            }
+            else
+            {
+                MessageBox.Show("Het aantal Friese meren wat u kunt bevaren is " + vaarwater.Aantal);
+                vaarwateren.Add(vaarwater);
+            }
+
+            if (dtp_Startdatum.Value > dtp_Einddatum.Value)
+            {
+                MessageBox.Show("Einddatum mag niet eerder zijn dan de startdatum!");
+            }
+            else
+            {
+                User user = new User(tb_HuurderNaam.Text, tb_Email.Text, tb_Wachtwoord.Text);
+                user.SaveUser(user);
+                HuurContract hc = new HuurContract(dtp_Startdatum.Value, dtp_Einddatum.Value, boten, artikelen, vaarwateren,
+                    user);
+                hc.SaveHuurContract(hc);
+                HuurContract.HuurContracten.Add(hc);
+                Close();
+            }
         }
 
         private void lb_Boten_SelectedIndexChanged(object sender, EventArgs e)
