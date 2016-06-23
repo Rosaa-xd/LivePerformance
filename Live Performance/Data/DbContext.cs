@@ -9,6 +9,7 @@ namespace Live_Performance.Data
 {
     /// <summary>
     /// Base database class where the database connection will be created.
+    /// Choose whichever connectionstring you'd like to use, they'll both work if you have a local database :)
     /// </summary>
     public abstract class DbContext
     {

@@ -42,7 +42,7 @@ namespace Live_Performance.Forms
 
         private void btn_AddVaarwater_Click(object sender, EventArgs e)
         {
-            if (Boot.BootTypeAllowed(boten))
+            if (Boot.BootTypeAllowed(boten) && !Vaarwater.VaarwaterenAllowed(vaarwateren))
             {
                 vaarwateren.Add((Vaarwater)cb_Vaarwateren.SelectedItem);
             }

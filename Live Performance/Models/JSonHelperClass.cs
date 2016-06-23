@@ -7,6 +7,9 @@ using Newtonsoft.Json.Linq;
 
 namespace Live_Performance.Models
 {
+    /// <summary>
+    /// Json Helper class that converts objects to json strings
+    /// </summary>
     public class JSonHelperClass
     {
         private const string HNAAM_KEY = "Naam Huurder";
@@ -17,6 +20,11 @@ namespace Live_Performance.Models
         private const string ARTIKELNAAM_KEY = "Naam Artikel";
         private const string VAARWATER_KEY = "Vaarwater";
 
+        /// <summary>
+        /// Method that converts Huurcontract to a json string
+        /// </summary>
+        /// <param name="hc"></param>
+        /// <returns></returns>
         public static string HuurContractToJson(HuurContract hc)
         {
             JArray array = new JArray();
