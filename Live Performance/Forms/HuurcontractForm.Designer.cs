@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_Boten = new System.Windows.Forms.GroupBox();
+            this.btn_AddBoot = new System.Windows.Forms.Button();
             this.lbl_ShowBoottype = new System.Windows.Forms.Label();
             this.lbl_ShowBootAandrijving = new System.Windows.Forms.Label();
             this.lbl_ShowBootSoort = new System.Windows.Forms.Label();
@@ -39,28 +40,29 @@
             this.lbl_Bootnaam = new System.Windows.Forms.Label();
             this.lb_Boten = new System.Windows.Forms.ListBox();
             this.gb_Artikelen = new System.Windows.Forms.GroupBox();
-            this.lb_Artikelen = new System.Windows.Forms.ListBox();
-            this.btn_AddBoot = new System.Windows.Forms.Button();
             this.btn_AddArtikel = new System.Windows.Forms.Button();
+            this.lb_Artikelen = new System.Windows.Forms.ListBox();
             this.gb_Info = new System.Windows.Forms.GroupBox();
-            this.lbl_HuurderNaam = new System.Windows.Forms.Label();
-            this.lbl_HuurderEmail = new System.Windows.Forms.Label();
-            this.tb_HuurderNaam = new System.Windows.Forms.TextBox();
-            this.tb_Email = new System.Windows.Forms.TextBox();
-            this.tb_Wachtwoord = new System.Windows.Forms.TextBox();
-            this.dtp_Startdatum = new System.Windows.Forms.DateTimePicker();
-            this.dtp_Einddatum = new System.Windows.Forms.DateTimePicker();
-            this.lbl_Wachtwoord = new System.Windows.Forms.Label();
-            this.lbl_Startdatum = new System.Windows.Forms.Label();
-            this.lbl_Einddatum = new System.Windows.Forms.Label();
-            this.nud_Vaarbudget = new System.Windows.Forms.NumericUpDown();
-            this.lbl_Vaarbudget = new System.Windows.Forms.Label();
-            this.lbl_Vaarwateren = new System.Windows.Forms.Label();
-            this.cb_Vaarwateren = new System.Windows.Forms.ComboBox();
-            this.btn_AddVaarwater = new System.Windows.Forms.Button();
-            this.lbl_vaarwaterenGekozen = new System.Windows.Forms.Label();
             this.lbl_GekozenVaarwateren = new System.Windows.Forms.Label();
+            this.lbl_vaarwaterenGekozen = new System.Windows.Forms.Label();
+            this.btn_AddVaarwater = new System.Windows.Forms.Button();
+            this.cb_Vaarwateren = new System.Windows.Forms.ComboBox();
+            this.lbl_Vaarwateren = new System.Windows.Forms.Label();
+            this.lbl_Vaarbudget = new System.Windows.Forms.Label();
+            this.nud_Vaarbudget = new System.Windows.Forms.NumericUpDown();
+            this.lbl_Einddatum = new System.Windows.Forms.Label();
+            this.lbl_Startdatum = new System.Windows.Forms.Label();
+            this.lbl_Wachtwoord = new System.Windows.Forms.Label();
+            this.dtp_Einddatum = new System.Windows.Forms.DateTimePicker();
+            this.dtp_Startdatum = new System.Windows.Forms.DateTimePicker();
+            this.tb_Wachtwoord = new System.Windows.Forms.TextBox();
+            this.tb_Email = new System.Windows.Forms.TextBox();
+            this.tb_HuurderNaam = new System.Windows.Forms.TextBox();
+            this.lbl_HuurderEmail = new System.Windows.Forms.Label();
+            this.lbl_HuurderNaam = new System.Windows.Forms.Label();
             this.btn_CreateHC = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_ShowActieradius = new System.Windows.Forms.Label();
             this.gb_Boten.SuspendLayout();
             this.gb_Artikelen.SuspendLayout();
             this.gb_Info.SuspendLayout();
@@ -69,6 +71,8 @@
             // 
             // gb_Boten
             // 
+            this.gb_Boten.Controls.Add(this.lbl_ShowActieradius);
+            this.gb_Boten.Controls.Add(this.label1);
             this.gb_Boten.Controls.Add(this.btn_AddBoot);
             this.gb_Boten.Controls.Add(this.lbl_ShowBoottype);
             this.gb_Boten.Controls.Add(this.lbl_ShowBootAandrijving);
@@ -85,6 +89,16 @@
             this.gb_Boten.TabIndex = 1;
             this.gb_Boten.TabStop = false;
             this.gb_Boten.Text = "Boten";
+            // 
+            // btn_AddBoot
+            // 
+            this.btn_AddBoot.Location = new System.Drawing.Point(304, 352);
+            this.btn_AddBoot.Name = "btn_AddBoot";
+            this.btn_AddBoot.Size = new System.Drawing.Size(75, 23);
+            this.btn_AddBoot.TabIndex = 9;
+            this.btn_AddBoot.Text = "Toevoegen";
+            this.btn_AddBoot.UseVisualStyleBackColor = true;
+            this.btn_AddBoot.Click += new System.EventHandler(this.btn_AddBoot_Click);
             // 
             // lbl_ShowBoottype
             // 
@@ -177,23 +191,6 @@
             this.gb_Artikelen.TabStop = false;
             this.gb_Artikelen.Text = "Artikelen";
             // 
-            // lb_Artikelen
-            // 
-            this.lb_Artikelen.FormattingEnabled = true;
-            this.lb_Artikelen.Location = new System.Drawing.Point(7, 20);
-            this.lb_Artikelen.Name = "lb_Artikelen";
-            this.lb_Artikelen.Size = new System.Drawing.Size(189, 355);
-            this.lb_Artikelen.TabIndex = 0;
-            // 
-            // btn_AddBoot
-            // 
-            this.btn_AddBoot.Location = new System.Drawing.Point(304, 352);
-            this.btn_AddBoot.Name = "btn_AddBoot";
-            this.btn_AddBoot.Size = new System.Drawing.Size(75, 23);
-            this.btn_AddBoot.TabIndex = 9;
-            this.btn_AddBoot.Text = "Toevoegen";
-            this.btn_AddBoot.UseVisualStyleBackColor = true;
-            // 
             // btn_AddArtikel
             // 
             this.btn_AddArtikel.Location = new System.Drawing.Point(202, 352);
@@ -202,6 +199,15 @@
             this.btn_AddArtikel.TabIndex = 1;
             this.btn_AddArtikel.Text = "Toevoegen";
             this.btn_AddArtikel.UseVisualStyleBackColor = true;
+            this.btn_AddArtikel.Click += new System.EventHandler(this.btn_AddArtikel_Click);
+            // 
+            // lb_Artikelen
+            // 
+            this.lb_Artikelen.FormattingEnabled = true;
+            this.lb_Artikelen.Location = new System.Drawing.Point(7, 20);
+            this.lb_Artikelen.Name = "lb_Artikelen";
+            this.lb_Artikelen.Size = new System.Drawing.Size(189, 355);
+            this.lb_Artikelen.TabIndex = 0;
             // 
             // gb_Info
             // 
@@ -229,127 +235,14 @@
             this.gb_Info.TabStop = false;
             this.gb_Info.Text = "Informatie";
             // 
-            // lbl_HuurderNaam
+            // lbl_GekozenVaarwateren
             // 
-            this.lbl_HuurderNaam.AutoSize = true;
-            this.lbl_HuurderNaam.Location = new System.Drawing.Point(7, 20);
-            this.lbl_HuurderNaam.Name = "lbl_HuurderNaam";
-            this.lbl_HuurderNaam.Size = new System.Drawing.Size(38, 13);
-            this.lbl_HuurderNaam.TabIndex = 0;
-            this.lbl_HuurderNaam.Text = "Naam:";
-            // 
-            // lbl_HuurderEmail
-            // 
-            this.lbl_HuurderEmail.AutoSize = true;
-            this.lbl_HuurderEmail.Location = new System.Drawing.Point(7, 47);
-            this.lbl_HuurderEmail.Name = "lbl_HuurderEmail";
-            this.lbl_HuurderEmail.Size = new System.Drawing.Size(38, 13);
-            this.lbl_HuurderEmail.TabIndex = 1;
-            this.lbl_HuurderEmail.Text = "E-mail:";
-            // 
-            // tb_HuurderNaam
-            // 
-            this.tb_HuurderNaam.Location = new System.Drawing.Point(84, 18);
-            this.tb_HuurderNaam.Name = "tb_HuurderNaam";
-            this.tb_HuurderNaam.Size = new System.Drawing.Size(174, 20);
-            this.tb_HuurderNaam.TabIndex = 2;
-            // 
-            // tb_Email
-            // 
-            this.tb_Email.Location = new System.Drawing.Point(84, 44);
-            this.tb_Email.Name = "tb_Email";
-            this.tb_Email.Size = new System.Drawing.Size(174, 20);
-            this.tb_Email.TabIndex = 3;
-            // 
-            // tb_Wachtwoord
-            // 
-            this.tb_Wachtwoord.Location = new System.Drawing.Point(84, 71);
-            this.tb_Wachtwoord.Name = "tb_Wachtwoord";
-            this.tb_Wachtwoord.Size = new System.Drawing.Size(174, 20);
-            this.tb_Wachtwoord.TabIndex = 4;
-            // 
-            // dtp_Startdatum
-            // 
-            this.dtp_Startdatum.Location = new System.Drawing.Point(84, 98);
-            this.dtp_Startdatum.Name = "dtp_Startdatum";
-            this.dtp_Startdatum.Size = new System.Drawing.Size(174, 20);
-            this.dtp_Startdatum.TabIndex = 5;
-            // 
-            // dtp_Einddatum
-            // 
-            this.dtp_Einddatum.Location = new System.Drawing.Point(84, 125);
-            this.dtp_Einddatum.Name = "dtp_Einddatum";
-            this.dtp_Einddatum.Size = new System.Drawing.Size(174, 20);
-            this.dtp_Einddatum.TabIndex = 6;
-            // 
-            // lbl_Wachtwoord
-            // 
-            this.lbl_Wachtwoord.AutoSize = true;
-            this.lbl_Wachtwoord.Location = new System.Drawing.Point(7, 74);
-            this.lbl_Wachtwoord.Name = "lbl_Wachtwoord";
-            this.lbl_Wachtwoord.Size = new System.Drawing.Size(71, 13);
-            this.lbl_Wachtwoord.TabIndex = 7;
-            this.lbl_Wachtwoord.Text = "Wachtwoord:";
-            // 
-            // lbl_Startdatum
-            // 
-            this.lbl_Startdatum.AutoSize = true;
-            this.lbl_Startdatum.Location = new System.Drawing.Point(7, 104);
-            this.lbl_Startdatum.Name = "lbl_Startdatum";
-            this.lbl_Startdatum.Size = new System.Drawing.Size(61, 13);
-            this.lbl_Startdatum.TabIndex = 8;
-            this.lbl_Startdatum.Text = "Startdatum:";
-            // 
-            // lbl_Einddatum
-            // 
-            this.lbl_Einddatum.AutoSize = true;
-            this.lbl_Einddatum.Location = new System.Drawing.Point(7, 131);
-            this.lbl_Einddatum.Name = "lbl_Einddatum";
-            this.lbl_Einddatum.Size = new System.Drawing.Size(60, 13);
-            this.lbl_Einddatum.TabIndex = 9;
-            this.lbl_Einddatum.Text = "Einddatum:";
-            // 
-            // nud_Vaarbudget
-            // 
-            this.nud_Vaarbudget.Location = new System.Drawing.Point(84, 152);
-            this.nud_Vaarbudget.Name = "nud_Vaarbudget";
-            this.nud_Vaarbudget.Size = new System.Drawing.Size(174, 20);
-            this.nud_Vaarbudget.TabIndex = 10;
-            // 
-            // lbl_Vaarbudget
-            // 
-            this.lbl_Vaarbudget.AutoSize = true;
-            this.lbl_Vaarbudget.Location = new System.Drawing.Point(7, 154);
-            this.lbl_Vaarbudget.Name = "lbl_Vaarbudget";
-            this.lbl_Vaarbudget.Size = new System.Drawing.Size(65, 13);
-            this.lbl_Vaarbudget.TabIndex = 11;
-            this.lbl_Vaarbudget.Text = "Vaarbudget:";
-            // 
-            // lbl_Vaarwateren
-            // 
-            this.lbl_Vaarwateren.AutoSize = true;
-            this.lbl_Vaarwateren.Location = new System.Drawing.Point(7, 182);
-            this.lbl_Vaarwateren.Name = "lbl_Vaarwateren";
-            this.lbl_Vaarwateren.Size = new System.Drawing.Size(70, 13);
-            this.lbl_Vaarwateren.TabIndex = 13;
-            this.lbl_Vaarwateren.Text = "Vaarwateren:";
-            // 
-            // cb_Vaarwateren
-            // 
-            this.cb_Vaarwateren.FormattingEnabled = true;
-            this.cb_Vaarwateren.Location = new System.Drawing.Point(84, 179);
-            this.cb_Vaarwateren.Name = "cb_Vaarwateren";
-            this.cb_Vaarwateren.Size = new System.Drawing.Size(174, 21);
-            this.cb_Vaarwateren.TabIndex = 14;
-            // 
-            // btn_AddVaarwater
-            // 
-            this.btn_AddVaarwater.Location = new System.Drawing.Point(183, 206);
-            this.btn_AddVaarwater.Name = "btn_AddVaarwater";
-            this.btn_AddVaarwater.Size = new System.Drawing.Size(75, 23);
-            this.btn_AddVaarwater.TabIndex = 15;
-            this.btn_AddVaarwater.Text = "Toevoegen";
-            this.btn_AddVaarwater.UseVisualStyleBackColor = true;
+            this.lbl_GekozenVaarwateren.AutoSize = true;
+            this.lbl_GekozenVaarwateren.Location = new System.Drawing.Point(10, 250);
+            this.lbl_GekozenVaarwateren.Name = "lbl_GekozenVaarwateren";
+            this.lbl_GekozenVaarwateren.Size = new System.Drawing.Size(12, 13);
+            this.lbl_GekozenVaarwateren.TabIndex = 17;
+            this.lbl_GekozenVaarwateren.Text = "x";
             // 
             // lbl_vaarwaterenGekozen
             // 
@@ -360,14 +253,128 @@
             this.lbl_vaarwaterenGekozen.TabIndex = 16;
             this.lbl_vaarwaterenGekozen.Text = "Gekozen vaarwateren:";
             // 
-            // lbl_GekozenVaarwateren
+            // btn_AddVaarwater
             // 
-            this.lbl_GekozenVaarwateren.AutoSize = true;
-            this.lbl_GekozenVaarwateren.Location = new System.Drawing.Point(10, 250);
-            this.lbl_GekozenVaarwateren.Name = "lbl_GekozenVaarwateren";
-            this.lbl_GekozenVaarwateren.Size = new System.Drawing.Size(12, 13);
-            this.lbl_GekozenVaarwateren.TabIndex = 17;
-            this.lbl_GekozenVaarwateren.Text = "x";
+            this.btn_AddVaarwater.Location = new System.Drawing.Point(183, 206);
+            this.btn_AddVaarwater.Name = "btn_AddVaarwater";
+            this.btn_AddVaarwater.Size = new System.Drawing.Size(75, 23);
+            this.btn_AddVaarwater.TabIndex = 15;
+            this.btn_AddVaarwater.Text = "Toevoegen";
+            this.btn_AddVaarwater.UseVisualStyleBackColor = true;
+            this.btn_AddVaarwater.Click += new System.EventHandler(this.btn_AddVaarwater_Click);
+            // 
+            // cb_Vaarwateren
+            // 
+            this.cb_Vaarwateren.FormattingEnabled = true;
+            this.cb_Vaarwateren.Location = new System.Drawing.Point(84, 179);
+            this.cb_Vaarwateren.Name = "cb_Vaarwateren";
+            this.cb_Vaarwateren.Size = new System.Drawing.Size(174, 21);
+            this.cb_Vaarwateren.TabIndex = 14;
+            // 
+            // lbl_Vaarwateren
+            // 
+            this.lbl_Vaarwateren.AutoSize = true;
+            this.lbl_Vaarwateren.Location = new System.Drawing.Point(7, 182);
+            this.lbl_Vaarwateren.Name = "lbl_Vaarwateren";
+            this.lbl_Vaarwateren.Size = new System.Drawing.Size(70, 13);
+            this.lbl_Vaarwateren.TabIndex = 13;
+            this.lbl_Vaarwateren.Text = "Vaarwateren:";
+            // 
+            // lbl_Vaarbudget
+            // 
+            this.lbl_Vaarbudget.AutoSize = true;
+            this.lbl_Vaarbudget.Location = new System.Drawing.Point(7, 154);
+            this.lbl_Vaarbudget.Name = "lbl_Vaarbudget";
+            this.lbl_Vaarbudget.Size = new System.Drawing.Size(65, 13);
+            this.lbl_Vaarbudget.TabIndex = 11;
+            this.lbl_Vaarbudget.Text = "Vaarbudget:";
+            // 
+            // nud_Vaarbudget
+            // 
+            this.nud_Vaarbudget.Location = new System.Drawing.Point(84, 152);
+            this.nud_Vaarbudget.Name = "nud_Vaarbudget";
+            this.nud_Vaarbudget.Size = new System.Drawing.Size(174, 20);
+            this.nud_Vaarbudget.TabIndex = 10;
+            // 
+            // lbl_Einddatum
+            // 
+            this.lbl_Einddatum.AutoSize = true;
+            this.lbl_Einddatum.Location = new System.Drawing.Point(7, 131);
+            this.lbl_Einddatum.Name = "lbl_Einddatum";
+            this.lbl_Einddatum.Size = new System.Drawing.Size(60, 13);
+            this.lbl_Einddatum.TabIndex = 9;
+            this.lbl_Einddatum.Text = "Einddatum:";
+            // 
+            // lbl_Startdatum
+            // 
+            this.lbl_Startdatum.AutoSize = true;
+            this.lbl_Startdatum.Location = new System.Drawing.Point(7, 104);
+            this.lbl_Startdatum.Name = "lbl_Startdatum";
+            this.lbl_Startdatum.Size = new System.Drawing.Size(61, 13);
+            this.lbl_Startdatum.TabIndex = 8;
+            this.lbl_Startdatum.Text = "Startdatum:";
+            // 
+            // lbl_Wachtwoord
+            // 
+            this.lbl_Wachtwoord.AutoSize = true;
+            this.lbl_Wachtwoord.Location = new System.Drawing.Point(7, 74);
+            this.lbl_Wachtwoord.Name = "lbl_Wachtwoord";
+            this.lbl_Wachtwoord.Size = new System.Drawing.Size(71, 13);
+            this.lbl_Wachtwoord.TabIndex = 7;
+            this.lbl_Wachtwoord.Text = "Wachtwoord:";
+            // 
+            // dtp_Einddatum
+            // 
+            this.dtp_Einddatum.Location = new System.Drawing.Point(84, 125);
+            this.dtp_Einddatum.Name = "dtp_Einddatum";
+            this.dtp_Einddatum.Size = new System.Drawing.Size(174, 20);
+            this.dtp_Einddatum.TabIndex = 6;
+            // 
+            // dtp_Startdatum
+            // 
+            this.dtp_Startdatum.Location = new System.Drawing.Point(84, 98);
+            this.dtp_Startdatum.Name = "dtp_Startdatum";
+            this.dtp_Startdatum.Size = new System.Drawing.Size(174, 20);
+            this.dtp_Startdatum.TabIndex = 5;
+            // 
+            // tb_Wachtwoord
+            // 
+            this.tb_Wachtwoord.Location = new System.Drawing.Point(84, 71);
+            this.tb_Wachtwoord.Name = "tb_Wachtwoord";
+            this.tb_Wachtwoord.Size = new System.Drawing.Size(174, 20);
+            this.tb_Wachtwoord.TabIndex = 4;
+            // 
+            // tb_Email
+            // 
+            this.tb_Email.Location = new System.Drawing.Point(84, 44);
+            this.tb_Email.Name = "tb_Email";
+            this.tb_Email.Size = new System.Drawing.Size(174, 20);
+            this.tb_Email.TabIndex = 3;
+            // 
+            // tb_HuurderNaam
+            // 
+            this.tb_HuurderNaam.Location = new System.Drawing.Point(84, 18);
+            this.tb_HuurderNaam.Name = "tb_HuurderNaam";
+            this.tb_HuurderNaam.Size = new System.Drawing.Size(174, 20);
+            this.tb_HuurderNaam.TabIndex = 2;
+            // 
+            // lbl_HuurderEmail
+            // 
+            this.lbl_HuurderEmail.AutoSize = true;
+            this.lbl_HuurderEmail.Location = new System.Drawing.Point(7, 47);
+            this.lbl_HuurderEmail.Name = "lbl_HuurderEmail";
+            this.lbl_HuurderEmail.Size = new System.Drawing.Size(38, 13);
+            this.lbl_HuurderEmail.TabIndex = 1;
+            this.lbl_HuurderEmail.Text = "E-mail:";
+            // 
+            // lbl_HuurderNaam
+            // 
+            this.lbl_HuurderNaam.AutoSize = true;
+            this.lbl_HuurderNaam.Location = new System.Drawing.Point(7, 20);
+            this.lbl_HuurderNaam.Name = "lbl_HuurderNaam";
+            this.lbl_HuurderNaam.Size = new System.Drawing.Size(38, 13);
+            this.lbl_HuurderNaam.TabIndex = 0;
+            this.lbl_HuurderNaam.Text = "Naam:";
             // 
             // btn_CreateHC
             // 
@@ -377,6 +384,25 @@
             this.btn_CreateHC.TabIndex = 4;
             this.btn_CreateHC.Text = "Bevestig";
             this.btn_CreateHC.UseVisualStyleBackColor = true;
+            this.btn_CreateHC.Click += new System.EventHandler(this.btn_CreateHC_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(203, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Actieradius: ";
+            // 
+            // lbl_ShowActieradius
+            // 
+            this.lbl_ShowActieradius.AutoSize = true;
+            this.lbl_ShowActieradius.Location = new System.Drawing.Point(270, 128);
+            this.lbl_ShowActieradius.Name = "lbl_ShowActieradius";
+            this.lbl_ShowActieradius.Size = new System.Drawing.Size(12, 13);
+            this.lbl_ShowActieradius.TabIndex = 11;
+            this.lbl_ShowActieradius.Text = "x";
             // 
             // HuurcontractForm
             // 
@@ -434,5 +460,7 @@
         private System.Windows.Forms.Label lbl_HuurderEmail;
         private System.Windows.Forms.Label lbl_HuurderNaam;
         private System.Windows.Forms.Button btn_CreateHC;
+        private System.Windows.Forms.Label lbl_ShowActieradius;
+        private System.Windows.Forms.Label label1;
     }
 }

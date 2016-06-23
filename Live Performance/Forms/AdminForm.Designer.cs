@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.gb_Boten = new System.Windows.Forms.GroupBox();
+            this.lbl_ShowPrijs = new System.Windows.Forms.Label();
+            this.lbl_Prijs = new System.Windows.Forms.Label();
+            this.btn_DeleteBoot = new System.Windows.Forms.Button();
+            this.btn_EditBoot = new System.Windows.Forms.Button();
             this.btn_AddBoot = new System.Windows.Forms.Button();
             this.lbl_ShowBoottype = new System.Windows.Forms.Label();
             this.lbl_ShowBootAandrijving = new System.Windows.Forms.Label();
@@ -40,18 +44,14 @@
             this.lbl_Bootnaam = new System.Windows.Forms.Label();
             this.lb_Boten = new System.Windows.Forms.ListBox();
             this.gb_Artikelen = new System.Windows.Forms.GroupBox();
-            this.btn_AddArtikel = new System.Windows.Forms.Button();
-            this.lb_Artikelen = new System.Windows.Forms.ListBox();
-            this.btn_EditBoot = new System.Windows.Forms.Button();
-            this.btn_DeleteBoot = new System.Windows.Forms.Button();
-            this.btn_EditArtikel = new System.Windows.Forms.Button();
-            this.btn_DeleteArtikel = new System.Windows.Forms.Button();
-            this.lbl_Prijs = new System.Windows.Forms.Label();
-            this.lbl_ShowPrijs = new System.Windows.Forms.Label();
             this.lbl_ShowPrijsArt = new System.Windows.Forms.Label();
             this.lbl_ShowNaam = new System.Windows.Forms.Label();
             this.lbl_ArtPrijs = new System.Windows.Forms.Label();
             this.lbl_Naam = new System.Windows.Forms.Label();
+            this.btn_DeleteArtikel = new System.Windows.Forms.Button();
+            this.btn_EditArtikel = new System.Windows.Forms.Button();
+            this.btn_AddArtikel = new System.Windows.Forms.Button();
+            this.lb_Artikelen = new System.Windows.Forms.ListBox();
             this.gb_Wateren = new System.Windows.Forms.GroupBox();
             this.lbl_ShowPrijsVW = new System.Windows.Forms.Label();
             this.lbl_NaamVW = new System.Windows.Forms.Label();
@@ -60,6 +60,8 @@
             this.btn_AddVW = new System.Windows.Forms.Button();
             this.lb_Vaarwateren = new System.Windows.Forms.ListBox();
             this.btn_Back = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.gb_Boten.SuspendLayout();
             this.gb_Artikelen.SuspendLayout();
             this.gb_Wateren.SuspendLayout();
@@ -67,6 +69,8 @@
             // 
             // gb_Boten
             // 
+            this.gb_Boten.Controls.Add(this.label2);
+            this.gb_Boten.Controls.Add(this.label1);
             this.gb_Boten.Controls.Add(this.lbl_ShowPrijs);
             this.gb_Boten.Controls.Add(this.lbl_Prijs);
             this.gb_Boten.Controls.Add(this.btn_DeleteBoot);
@@ -87,6 +91,42 @@
             this.gb_Boten.TabIndex = 2;
             this.gb_Boten.TabStop = false;
             this.gb_Boten.Text = "Boten";
+            // 
+            // lbl_ShowPrijs
+            // 
+            this.lbl_ShowPrijs.AutoSize = true;
+            this.lbl_ShowPrijs.Location = new System.Drawing.Point(270, 128);
+            this.lbl_ShowPrijs.Name = "lbl_ShowPrijs";
+            this.lbl_ShowPrijs.Size = new System.Drawing.Size(12, 13);
+            this.lbl_ShowPrijs.TabIndex = 13;
+            this.lbl_ShowPrijs.Text = "x";
+            // 
+            // lbl_Prijs
+            // 
+            this.lbl_Prijs.AutoSize = true;
+            this.lbl_Prijs.Location = new System.Drawing.Point(202, 128);
+            this.lbl_Prijs.Name = "lbl_Prijs";
+            this.lbl_Prijs.Size = new System.Drawing.Size(29, 13);
+            this.lbl_Prijs.TabIndex = 12;
+            this.lbl_Prijs.Text = "Prijs:";
+            // 
+            // btn_DeleteBoot
+            // 
+            this.btn_DeleteBoot.Location = new System.Drawing.Point(304, 352);
+            this.btn_DeleteBoot.Name = "btn_DeleteBoot";
+            this.btn_DeleteBoot.Size = new System.Drawing.Size(75, 23);
+            this.btn_DeleteBoot.TabIndex = 11;
+            this.btn_DeleteBoot.Text = "Verwijder";
+            this.btn_DeleteBoot.UseVisualStyleBackColor = true;
+            // 
+            // btn_EditBoot
+            // 
+            this.btn_EditBoot.Location = new System.Drawing.Point(304, 323);
+            this.btn_EditBoot.Name = "btn_EditBoot";
+            this.btn_EditBoot.Size = new System.Drawing.Size(75, 23);
+            this.btn_EditBoot.TabIndex = 10;
+            this.btn_EditBoot.Text = "Wijzig";
+            this.btn_EditBoot.UseVisualStyleBackColor = true;
             // 
             // btn_AddBoot
             // 
@@ -194,77 +234,6 @@
             this.gb_Artikelen.TabStop = false;
             this.gb_Artikelen.Text = "Artikelen";
             // 
-            // btn_AddArtikel
-            // 
-            this.btn_AddArtikel.Location = new System.Drawing.Point(304, 294);
-            this.btn_AddArtikel.Name = "btn_AddArtikel";
-            this.btn_AddArtikel.Size = new System.Drawing.Size(75, 23);
-            this.btn_AddArtikel.TabIndex = 1;
-            this.btn_AddArtikel.Text = "Toevoegen";
-            this.btn_AddArtikel.UseVisualStyleBackColor = true;
-            // 
-            // lb_Artikelen
-            // 
-            this.lb_Artikelen.FormattingEnabled = true;
-            this.lb_Artikelen.Location = new System.Drawing.Point(7, 20);
-            this.lb_Artikelen.Name = "lb_Artikelen";
-            this.lb_Artikelen.Size = new System.Drawing.Size(189, 355);
-            this.lb_Artikelen.TabIndex = 0;
-            // 
-            // btn_EditBoot
-            // 
-            this.btn_EditBoot.Location = new System.Drawing.Point(304, 323);
-            this.btn_EditBoot.Name = "btn_EditBoot";
-            this.btn_EditBoot.Size = new System.Drawing.Size(75, 23);
-            this.btn_EditBoot.TabIndex = 10;
-            this.btn_EditBoot.Text = "Wijzig";
-            this.btn_EditBoot.UseVisualStyleBackColor = true;
-            // 
-            // btn_DeleteBoot
-            // 
-            this.btn_DeleteBoot.Location = new System.Drawing.Point(304, 352);
-            this.btn_DeleteBoot.Name = "btn_DeleteBoot";
-            this.btn_DeleteBoot.Size = new System.Drawing.Size(75, 23);
-            this.btn_DeleteBoot.TabIndex = 11;
-            this.btn_DeleteBoot.Text = "Verwijder";
-            this.btn_DeleteBoot.UseVisualStyleBackColor = true;
-            // 
-            // btn_EditArtikel
-            // 
-            this.btn_EditArtikel.Location = new System.Drawing.Point(304, 323);
-            this.btn_EditArtikel.Name = "btn_EditArtikel";
-            this.btn_EditArtikel.Size = new System.Drawing.Size(75, 23);
-            this.btn_EditArtikel.TabIndex = 2;
-            this.btn_EditArtikel.Text = "Wijzig";
-            this.btn_EditArtikel.UseVisualStyleBackColor = true;
-            // 
-            // btn_DeleteArtikel
-            // 
-            this.btn_DeleteArtikel.Location = new System.Drawing.Point(304, 352);
-            this.btn_DeleteArtikel.Name = "btn_DeleteArtikel";
-            this.btn_DeleteArtikel.Size = new System.Drawing.Size(75, 23);
-            this.btn_DeleteArtikel.TabIndex = 3;
-            this.btn_DeleteArtikel.Text = "Verwijder";
-            this.btn_DeleteArtikel.UseVisualStyleBackColor = true;
-            // 
-            // lbl_Prijs
-            // 
-            this.lbl_Prijs.AutoSize = true;
-            this.lbl_Prijs.Location = new System.Drawing.Point(202, 128);
-            this.lbl_Prijs.Name = "lbl_Prijs";
-            this.lbl_Prijs.Size = new System.Drawing.Size(29, 13);
-            this.lbl_Prijs.TabIndex = 12;
-            this.lbl_Prijs.Text = "Prijs:";
-            // 
-            // lbl_ShowPrijs
-            // 
-            this.lbl_ShowPrijs.AutoSize = true;
-            this.lbl_ShowPrijs.Location = new System.Drawing.Point(270, 128);
-            this.lbl_ShowPrijs.Name = "lbl_ShowPrijs";
-            this.lbl_ShowPrijs.Size = new System.Drawing.Size(12, 13);
-            this.lbl_ShowPrijs.TabIndex = 13;
-            this.lbl_ShowPrijs.Text = "x";
-            // 
             // lbl_ShowPrijsArt
             // 
             this.lbl_ShowPrijsArt.AutoSize = true;
@@ -300,6 +269,41 @@
             this.lbl_Naam.Size = new System.Drawing.Size(38, 13);
             this.lbl_Naam.TabIndex = 7;
             this.lbl_Naam.Text = "Naam:";
+            // 
+            // btn_DeleteArtikel
+            // 
+            this.btn_DeleteArtikel.Location = new System.Drawing.Point(304, 352);
+            this.btn_DeleteArtikel.Name = "btn_DeleteArtikel";
+            this.btn_DeleteArtikel.Size = new System.Drawing.Size(75, 23);
+            this.btn_DeleteArtikel.TabIndex = 3;
+            this.btn_DeleteArtikel.Text = "Verwijder";
+            this.btn_DeleteArtikel.UseVisualStyleBackColor = true;
+            // 
+            // btn_EditArtikel
+            // 
+            this.btn_EditArtikel.Location = new System.Drawing.Point(304, 323);
+            this.btn_EditArtikel.Name = "btn_EditArtikel";
+            this.btn_EditArtikel.Size = new System.Drawing.Size(75, 23);
+            this.btn_EditArtikel.TabIndex = 2;
+            this.btn_EditArtikel.Text = "Wijzig";
+            this.btn_EditArtikel.UseVisualStyleBackColor = true;
+            // 
+            // btn_AddArtikel
+            // 
+            this.btn_AddArtikel.Location = new System.Drawing.Point(304, 294);
+            this.btn_AddArtikel.Name = "btn_AddArtikel";
+            this.btn_AddArtikel.Size = new System.Drawing.Size(75, 23);
+            this.btn_AddArtikel.TabIndex = 1;
+            this.btn_AddArtikel.Text = "Toevoegen";
+            this.btn_AddArtikel.UseVisualStyleBackColor = true;
+            // 
+            // lb_Artikelen
+            // 
+            this.lb_Artikelen.FormattingEnabled = true;
+            this.lb_Artikelen.Location = new System.Drawing.Point(7, 20);
+            this.lb_Artikelen.Name = "lb_Artikelen";
+            this.lb_Artikelen.Size = new System.Drawing.Size(189, 355);
+            this.lb_Artikelen.TabIndex = 0;
             // 
             // gb_Wateren
             // 
@@ -378,6 +382,24 @@
             this.btn_Back.Text = "Terug";
             this.btn_Back.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(202, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Tankinhoud:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(270, 150);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(12, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "x";
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,5 +455,7 @@
         private System.Windows.Forms.Button btn_AddVW;
         private System.Windows.Forms.ListBox lb_Vaarwateren;
         private System.Windows.Forms.Button btn_Back;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
