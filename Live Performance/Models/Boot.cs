@@ -56,6 +56,20 @@ namespace Live_Performance.Models
             BootDbContext.GetAll();
         }
 
+        public int GetActieRadius(Boot boot)
+        {
+            return boot.Tankinhoud*15;
+        }
+
+        public string GetBoottypeNaam(Boot boot)
+        {
+            if (boot.Boottype == null)
+            {
+                return " ";
+            }
+            return boot.Boottype.Naam;
+        }
+
         public override string ToString()
         {
             return Naam;

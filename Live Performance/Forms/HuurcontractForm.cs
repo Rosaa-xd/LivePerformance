@@ -52,6 +52,18 @@ namespace Live_Performance.Forms
             HuurContract hc = new HuurContract(dtp_Startdatum.Value, dtp_Einddatum.Value, boten, artikelen, vaarwateren,
                 user);
             hc.SaveHuurContract(hc);
+            HuurContract.HuurContracten.Add(hc);
+            Close();
+        }
+
+        private void lb_Boten_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Boot boot = (Boot)lb_Boten.SelectedItem;
+            lbl_ShowBootNaam.Text = boot.Naam;
+            lbl_ShowBootSoort.Text = boot.Soort;
+            lbl_ShowBootAandrijving.Text = boot.Aandrijving;
+            lbl_ShowBoottype.Text = boot.GetBoottypeNaam(boot);
+            lbl_ShowActieradius.Text = boot.GetActieRadius(boot).ToString();
         }
     }
 }

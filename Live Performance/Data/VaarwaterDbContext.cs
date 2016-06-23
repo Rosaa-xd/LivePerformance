@@ -46,7 +46,10 @@ namespace Live_Performance.Data
 
                 using (OracleDataReader reader = command.ExecuteReader())
                 {
-                    vaarwateren.Add(GetVaarwaterFromDataRecord(reader));
+                    while (reader.Read())
+                    {
+                        vaarwateren.Add(GetVaarwaterFromDataRecord(reader));
+                    }
                 }
             }
             return vaarwateren;

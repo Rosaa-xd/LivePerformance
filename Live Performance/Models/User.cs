@@ -33,5 +33,10 @@ namespace Live_Performance.Models
         {
             UserDbContext.Save(user);
         }
+
+        public override string ToString()
+        {
+            return Naam + " " + EmailAdres;
+        }
     }
 }

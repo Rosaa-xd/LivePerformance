@@ -52,7 +52,7 @@ namespace Live_Performance.Models
 
         public override string ToString()
         {
-            return Naam + Aantal;
+            return Naam + " " + Aantal;
         }
     }
 }

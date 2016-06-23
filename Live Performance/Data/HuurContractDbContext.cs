@@ -38,6 +38,7 @@ namespace Live_Performance.Data
                 string startDatum = hc.StartDatum.ToString("dd-MM-yyyy");
                 command.Parameters.Add("datum_start", startDatum);
                 string eindDatum = hc.EindDatum.ToString("dd-MM-yyyy");
+                command.Parameters.Add("datum_eind", eindDatum);
                 command.Parameters.Add("huurcontract_id", OracleDbType.Int32, ParameterDirection.ReturnValue);
 
                 command.Connection = CreateConnection();
@@ -90,6 +91,18 @@ namespace Live_Performance.Data
 
                     command.ExecuteNonQuery();
                 }
+            }
+
+            string userQuery = "INSERT INTO TBL_HUURDER_CONTRACT (HUURDER_ID, HUURCONTRACT_ID) VALUES (:user_id, :id)";
+
+            using (OracleConnection connection = CreateConnection())
+            using (OracleCommand command = new OracleCommand(userQuery, connection))
+            {
+                command.BindByName = true;
+                command.Parameters.Add(new OracleParameter("user_id", huurder.Id));
+                command.Parameters.Add(new OracleParameter("id", hc.Id));
+
+                command.ExecuteNonQuery();
             }
             return hc;
         }

@@ -36,7 +36,7 @@ namespace Live_Performance.Data
         {
             string query = "SELECT H.* " +
                            "FROM TBL_HUURDER H " +
-                           "INNER JOIN TBL_HUURDER_CONTRACT HHC ON H.ID = HC.HUURDER_ID " +
+                           "INNER JOIN TBL_HUURDER_CONTRACT HHC ON H.ID = HHC.HUURDER_ID " +
                            "INNER JOIN TBL_HUURCONTRACT HC ON HC.ID = HHC.HUURCONTRACT_ID " +
                            "WHERE HC.ID=:id";
 

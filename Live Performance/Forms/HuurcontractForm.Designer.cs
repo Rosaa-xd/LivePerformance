@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gb_Boten = new System.Windows.Forms.GroupBox();
+            this.lbl_ShowActieradius = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_AddBoot = new System.Windows.Forms.Button();
             this.lbl_ShowBoottype = new System.Windows.Forms.Label();
             this.lbl_ShowBootAandrijving = new System.Windows.Forms.Label();
@@ -61,8 +63,6 @@
             this.lbl_HuurderEmail = new System.Windows.Forms.Label();
             this.lbl_HuurderNaam = new System.Windows.Forms.Label();
             this.btn_CreateHC = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_ShowActieradius = new System.Windows.Forms.Label();
             this.gb_Boten.SuspendLayout();
             this.gb_Artikelen.SuspendLayout();
             this.gb_Info.SuspendLayout();
@@ -89,6 +89,24 @@
             this.gb_Boten.TabIndex = 1;
             this.gb_Boten.TabStop = false;
             this.gb_Boten.Text = "Boten";
+            // 
+            // lbl_ShowActieradius
+            // 
+            this.lbl_ShowActieradius.AutoSize = true;
+            this.lbl_ShowActieradius.Location = new System.Drawing.Point(270, 128);
+            this.lbl_ShowActieradius.Name = "lbl_ShowActieradius";
+            this.lbl_ShowActieradius.Size = new System.Drawing.Size(12, 13);
+            this.lbl_ShowActieradius.TabIndex = 11;
+            this.lbl_ShowActieradius.Text = "x";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(203, 128);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Actieradius: ";
             // 
             // btn_AddBoot
             // 
@@ -179,6 +197,7 @@
             this.lb_Boten.Name = "lb_Boten";
             this.lb_Boten.Size = new System.Drawing.Size(189, 355);
             this.lb_Boten.TabIndex = 0;
+            this.lb_Boten.SelectedIndexChanged += new System.EventHandler(this.lb_Boten_SelectedIndexChanged);
             // 
             // gb_Artikelen
             // 
@@ -385,24 +404,6 @@
             this.btn_CreateHC.Text = "Bevestig";
             this.btn_CreateHC.UseVisualStyleBackColor = true;
             this.btn_CreateHC.Click += new System.EventHandler(this.btn_CreateHC_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(203, 128);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Actieradius: ";
-            // 
-            // lbl_ShowActieradius
-            // 
-            this.lbl_ShowActieradius.AutoSize = true;
-            this.lbl_ShowActieradius.Location = new System.Drawing.Point(270, 128);
-            this.lbl_ShowActieradius.Name = "lbl_ShowActieradius";
-            this.lbl_ShowActieradius.Size = new System.Drawing.Size(12, 13);
-            this.lbl_ShowActieradius.TabIndex = 11;
-            this.lbl_ShowActieradius.Text = "x";
             // 
             // HuurcontractForm
             // 

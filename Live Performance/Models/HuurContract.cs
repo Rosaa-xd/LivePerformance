@@ -52,5 +52,10 @@ namespace Live_Performance.Models
         {
             HuurContractDbContext.GetAll();
         }
+
+        public override string ToString()
+        {
+            return Huurder + " " + StartDatum.ToString("dd-MM-yyyy");
+        }
     }
 }
